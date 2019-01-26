@@ -16,3 +16,8 @@ mkdir -p ./.config
 \cp -r ~/.config/neofetch ./.config/
 \cp -r ~/.config/polybar ./.config/
 \cp -r ~/.config/rofi ./.config/
+
+mkdir -p ./.local/share/fonts/
+
+\cp ~/.local/share/fonts/*.ttf ./.local/share/fonts
+\cp ~/.local/share/fonts/*.otf ./.local/share/fonts
