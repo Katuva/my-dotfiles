@@ -1,0 +1,11 @@
+configuration {
+    drun-icon-theme:    "Papirus-Dark";
+    font:               "Droid Sans bold 14";
+    cycle:              true;
+    hide-scrollbar:     true;
+    disable-history:    false;
+    fullscreen:         true;
+    modi:               "drun";
+    show-icons:         true;
+}
+

@@ -1,0 +1,37 @@
+/* This theme is intended for a 5 items wide menu
+ * on a 1366x768 resolution.
+ */
+* {
+    main-color:       #728cbb;
+    background:       #1c1c1c;
+    background-alt:   #1f1f1f;
+    background-light: #282828;
+    foreground:       #888888;
+    /* Base values for all */
+    background-color: @background;
+    text-color:       @foreground;
+}
+window {
+    padding: 35% 20%;
+}
+/* Input window */
+inputbar {
+    children: [];
+}
+/* List of entries top right bottom left */
+element {
+    padding: 36px 0px 28px -40px;
+    margin: 0px;
+    border: 0px 0px 8px 0px;
+}
+element.normal {
+    background-color: @background-alt;
+    border-color: @background-alt;
+}
+element.selected {
+    background-color: @background-light;
+    text-color: @main-color;
+    border-color: @main-color;
+}
+
+

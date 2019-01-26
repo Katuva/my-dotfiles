@@ -1,0 +1,186 @@
+;
+; ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗ 
+; ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+; ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+; ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+; ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+; ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+
+[colors]
+background       = #333333
+background-light = #4d4d4d
+foreground       = #e2e2e2
+foreground-dark  = #aaaaaa
+foreground-light = #ffffff
+color            = #728cbb
+color-alt        = #de935f
+transparent      = #00000000
+
+
+[fonts]
+; The default font to use for text
+text             = Hurmit Nerd Font:style=bold:pixelsize=8;3
+; Used for the % character and the colored small text
+text-small       = DejaVu Sans:style=bold:pixelsize=6;2
+; Used for the workspaces numbers
+text-small-up    = DejaVu Sans:style=bold:pixelsize=6;-6
+; Icons to use on the bar
+icons-fa         = Font Awesome 5 Pro Solid:style=regular:pixelsize=11;2
+; For the VPN logo
+icons-fa-small   = Font Awesome 5 Pro Solid:style=regular:pixelsize=8;8
+; Font used for the distro module (the distro logo) and a few other icons
+icons-nf         = Hurmit Nerd Font:pixelsize=11;2
+
+
+[bar/fractionned_top_bar]
+monitor = DVI-I-1
+width = 100%
+height = 30
+bottom = false
+fixed-center = true
+
+background = ${colors.transparent}
+foreground = ${colors.transparent}
+
+; Gaps around the bar
+border-size = 16
+border-bottom-size = 0
+
+font-0 = ${fonts.text}
+font-1 = ${fonts.text-small}
+font-2 = ${fonts.icons-fa}
+font-3 = ${fonts.icons-nf}
+font-4 = ${fonts.icons-fa-small}
+font-5 = ${fonts.text-small-up}
+
+modules-left   = distro workspaces
+modules-center = time
+modules-right  = date coretemp powermenu
+
+tray-position = right
+tray-padding = 3
+tray-maxsize = 16
+tray-background = ${colors.background}
+tray-detached = false
+
+[bar/top_bar]
+monitor = DVI-I-1
+width = 100%
+height = 32
+bottom = false
+fixed-center = true
+cursor-click = pointer
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+
+font-0 = ${fonts.text}
+font-1 = ${fonts.text-small}
+font-2 = ${fonts.icons-fa}
+font-3 = ${fonts.icons-nf}
+font-4 = ${fonts.icons-fa-small}
+font-5 = ${fonts.text-small-up}
+
+modules-left   = distro workspaces
+modules-center = wired time updates
+modules-right  = date powermenu
+
+tray-position = right
+tray-padding = 3
+tray-maxsize = 16
+tray-background = ${colors.background}
+tray-detached = false
+
+
+[module/distro]
+type = custom/text
+
+content = "  %{T4}%{T-}  "
+content-foreground = ${colors.foreground}
+content-background = ${colors.color}
+
+click-left = rofi -show drun -display-drun apps -theme themes/drun.rasi
+click-right = rofi -show drun -display-drun apps -theme themes/drun.rasi
+
+
+[module/workspaces]
+type = internal/i3
+
+format = <label-state>
+index-sort = true
+wrapping-scroll = false
+
+ws-icon-default = 
+; Terminal
+ws-icon-0 = 1;
+; Firefox
+ws-icon-1 = 2;%{T4}%{T-}
+; Code
+ws-icon-2 = 3;
+; Files/Folders
+ws-icon-3 = 4;
+; Movies / TV Shows
+ws-icon-4 = 5;
+; Chats
+ws-icon-5 = 6;
+; LibreOffice
+ws-icon-6 = 7;
+; VMs
+ws-icon-7 = 8;
+; DL
+ws-icon-8 = 9;
+
+; Active workspaces
+label-focused = "   %{T3}%icon% %{T6}#%index% "
+label-focused-background = ${colors.background-light}
+label-focused-foreground = ${colors.foreground}
+
+; Inactive workspaces
+label-unfocused = "   %{T3}%icon% %{T6}#%index% "
+label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.foreground-dark}
+
+; Workspaces with urgency hint
+label-urgent = "   %{T3}%icon% %{T6}#%index% "
+label-urgent-background = ${colors.background}
+label-urgent-foreground = ${colors.color-alt}
+
+
+[module/time]
+type = internal/date
+
+label = %time%
+time = %I:%M %p
+
+format = %{F#728cbb T4}%{F#e2e2e2 T1} <label>
+format-padding = 3
+format-background = ${colors.background}
+
+
+[module/date]
+type = internal/date
+
+label = %date%
+date = %d%{T2} / %{T1}%m%{T2} / %{T1}%Y%{F#728cbb T2}  %A%{T1}
+
+format = %{A1:gsimplecal &:}   %{F#728cbb T4}%{F#e2e2e2 T1} <label>   %{A}
+format-background = ${colors.background}
+
+
+[module/powermenu]
+type = custom/text
+
+content = "  %{T4}%{T1}  "
+content-background = ${colors.color}
+content-foreground = ${colors.foreground}
+
+click-left = sh $HOME/.config/rofi/scripts/powermenu.sh
+click-right = sh $HOME/.config/rofi/scripts/powermenu.sh
+
+[settings]
+screenchange-reload = true
+; vim:ft=dosini
+
