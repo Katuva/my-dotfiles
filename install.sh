@@ -12,6 +12,8 @@ gem install colorls
 
 npm i -g tern
 
+rm -rf ~/.emacs.d
+
 git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 \cp -r ./.i3 ~/
