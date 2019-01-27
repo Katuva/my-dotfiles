@@ -28,15 +28,6 @@ cyan             = #89ddff
 white            = #d0d0d0
 black            = #383838
 
-; background       = #333333
-; background-light = #4d4d4d
-; foreground       = #e2e2e2
-; foreground-dark  = #aaaaaa
-; foreground-light = #ffffff
-; color            = #728cbb
-; color-alt        = #de935f
-; transparent      = #00000000
-
 
 [fonts]
 ; The default font to use for text

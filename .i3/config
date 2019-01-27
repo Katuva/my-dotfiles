@@ -238,22 +238,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Set shut down, restart and locking features
 bindsym $mod+0 exec sh $HOME/.config/rofi/scripts/powermenu.sh
-#bindsym $mod+0 mode "$mode_system"
-#set $mode_system (l)ock, (e)xit, switch_(u)ser, (r)eboot, (Shift+s)hutdown
-#mode "$mode_system" {
-#    bindsym l exec --no-startup-id i3exit lock, mode "default"
-#    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-#    bindsym e exec --no-startup-id i3exit logout, mode "default"
-#    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-#    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
-
-    # exit system mode: "Enter" or "Escape"
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-#}
 
 # Resize window (you can also use the mouse for that)
-#bindsym $mod+r mode "resize"
 bindsym $mod+r exec notify-send --icon=/usr/share/icons/Adwaita/scalable/actions/object-flip-horizontal-symbolic.svg "Resizing mode"; mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -328,43 +314,6 @@ set_from_resource $term_color12    color12
 set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
-
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
-#bar {
-#	i3bar_command i3bar
-#	status_command i3status
-#	position bottom
-
-#	bindsym button4 nop
-#	bindsym button5 nop
-#	strip_workspace_numbers yes
-
-#    colors {
-#        background #222D31
-#        statusline #F9FAF9
-#        separator  #454947
-
-#                      border  backgr. text
-#        focused_workspace  #F9FAF9 #16a085 #292F34
-#        active_workspace   #595B5B #353836 #FDF6E3
-#        inactive_workspace #595B5B #222D31 #EEE8D5
-#        binding_mode       #16a085 #2C2C2C #F9FAF9
-#        urgent_workspace   #16a085 #FDF6E3 #E5201D
-#    }
-#}
-
-# hide/unhide i3status bar
-#bindsym $mod+m bar mode toggle
-
-# Theme colors
-# class                   border  backgr. text    indic.   child_border
-#  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-#  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-#  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-#  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-#  client.placeholder      #000000 #0c0c0c #ffffff #000000 
-
-#  client.background       #2B2C2B
 
 client.focused          #728cbb #728cbb #e2e2e2 #728cbb
 client.focused_inactive #666666 #666666 #728cbb #666666
