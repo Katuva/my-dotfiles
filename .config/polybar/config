@@ -8,14 +8,34 @@
 ;
 
 [colors]
-background       = #333333
-background-light = #4d4d4d
-foreground       = #e2e2e2
+background       = #292d3e
+background-light = #474e6c
+foreground       = #dbe0ff
+foreground-light = #dbe0ff
 foreground-dark  = #aaaaaa
-foreground-light = #ffffff
-color            = #728cbb
+color            = #ffcb6b
 color-alt        = #de935f
+primary          = #82aaff
+alert            = #fbdbdd
 transparent      = #00000000
+
+red              = #f07178
+green            = #c3e88d
+yellow           = #ffcb6b
+blue             = #82aaff
+magenta          = #c792ea
+cyan             = #89ddff
+white            = #d0d0d0
+black            = #383838
+
+; background       = #333333
+; background-light = #4d4d4d
+; foreground       = #e2e2e2
+; foreground-dark  = #aaaaaa
+; foreground-light = #ffffff
+; color            = #728cbb
+; color-alt        = #de935f
+; transparent      = #00000000
 
 
 [fonts]
@@ -100,7 +120,7 @@ type = custom/text
 
 ; content = "  %{T4}%{T-}  "
 content = "  %{T3}%{T-}  "
-content-foreground = ${colors.foreground}
+content-foreground = ${colors.black}
 content-background = ${colors.color}
 
 click-left = rofi -show drun -display-drun apps -theme themes/drun.rasi
@@ -146,7 +166,7 @@ label-unfocused-foreground = ${colors.foreground-dark}
 
 ; Workspaces with urgency hint
 label-urgent = "   %{T3}%icon% %{T6}#%index% "
-label-urgent-background = ${colors.background}
+label-urgent-background = ${colors.alert}
 label-urgent-foreground = ${colors.color-alt}
 
 
@@ -176,7 +196,7 @@ type = custom/text
 
 content = "  %{T4}%{T1}  "
 content-background = ${colors.color}
-content-foreground = ${colors.foreground}
+content-foreground = ${colors.black}
 
 click-left = sh $HOME/.config/rofi/scripts/powermenu.sh
 click-right = sh $HOME/.config/rofi/scripts/powermenu.sh
