@@ -85,7 +85,7 @@ font-4 = ${fonts.icons-fa-small}
 font-5 = ${fonts.text-small-up}
 
 modules-left   = distro workspaces
-modules-center = wired time updates
+modules-center = time
 modules-right  = date powermenu
 
 tray-position = right
@@ -98,7 +98,8 @@ tray-detached = false
 [module/distro]
 type = custom/text
 
-content = "  %{T4}%{T-}  "
+; content = "  %{T4}%{T-}  "
+content = "  %{T3}%{T-}  "
 content-foreground = ${colors.foreground}
 content-background = ${colors.color}
 
@@ -122,16 +123,16 @@ ws-icon-1 = 2;%{T4}%{T-}
 ws-icon-2 = 3;
 ; Files/Folders
 ws-icon-3 = 4;
-; Movies / TV Shows
-ws-icon-4 = 5;
-; Chats
-ws-icon-5 = 6;
-; LibreOffice
-ws-icon-6 = 7;
+; Misc
+ws-icon-4 = 5;
+; Misc
+ws-icon-5 = 6;
+; Misc
+ws-icon-6 = 7;
 ; VMs
 ws-icon-7 = 8;
-; DL
-ws-icon-8 = 9;
+; Secret stuff
+ws-icon-8 = 9;
 
 ; Active workspaces
 label-focused = "   %{T3}%icon% %{T6}#%index% "
