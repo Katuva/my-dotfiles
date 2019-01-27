@@ -70,46 +70,75 @@ font:
 
 render_timer: false
 
-# Colors (Turing)
 colors:
   primary:
-    background: '0x263647'
-    foreground: '0xeaeaea'
-    bright_foreground: '0xffffff'
+    background: '0x292d3e'
+    foreground: '0x959dcb'
 
   cursor:
-    text: '0x000000'
-    cursor: '0xffffff'
+    text: '0x292d3e'
+    cursor: '0x959dcb'
 
   normal:
-    black:   '0x000000'
-    red:     '0xf9555f'
-    green:   '0x21b089'
-    yellow:  '0xfef02a'
-    blue:    '0x589df6'
-    magenta: '0x944d95'
-    cyan:    '0x1f9ee7'
-    white:   '0xdddddd'
+    black:   '0x292d3e'
+    red:     '0xf07178'
+    green:   '0xc3e88d'
+    yellow:  '0xffcb6b'
+    blue:    '0x82aaff'
+    magenta: '0xc792ea'
+    cyan:    '0x89ddff'
+    white:   '0x959dcb'
 
   bright:
-    black:   '0x555555'
-    red:     '0xfa8c8f'
-    green:   '0x35bb9a'
-    yellow:  '0xffff55'
-    blue:    '0x589df6'
-    magenta: '0xe75699'
-    cyan:    '0x3979bc'
+    black:   '0x676e95'
+    red:     '0xf78c6c'
+    green:   '0x444267'
+    yellow:  '0x32374d'
+    blue:    '0x8796b0'
+    magenta: '0x959dcb'
+    cyan:    '0xff5370'
     white:   '0xffffff'
 
-  dim:
-    black:   '0x333333'
-    red:     '0xf2777a'
-    green:   '0x99cc99'
-    yellow:  '0xffcc66'
-    blue:    '0x6699cc'
-    magenta: '0xcc99cc'
-    cyan:    '0x66cccc'
-    white:   '0xdddddd'
+# Colors (Turing)
+# colors:
+#   primary:
+#     background: '0x263647'
+#     foreground: '0xeaeaea'
+#     bright_foreground: '0xffffff'
+
+#   cursor:
+#     text: '0x000000'
+#     cursor: '0xffffff'
+
+#   normal:
+#     black:   '0x000000'
+#     red:     '0xf9555f'
+#     green:   '0x21b089'
+#     yellow:  '0xfef02a'
+#     blue:    '0x589df6'
+#     magenta: '0x944d95'
+#     cyan:    '0x1f9ee7'
+#     white:   '0xdddddd'
+
+#   bright:
+#     black:   '0x555555'
+#     red:     '0xfa8c8f'
+#     green:   '0x35bb9a'
+#     yellow:  '0xffff55'
+#     blue:    '0x589df6'
+#     magenta: '0xe75699'
+#     cyan:    '0x3979bc'
+#     white:   '0xffffff'
+
+#   dim:
+#     black:   '0x333333'
+#     red:     '0xf2777a'
+#     green:   '0x99cc99'
+#     yellow:  '0xffcc66'
+#     blue:    '0x6699cc'
+#     magenta: '0xcc99cc'
+#     cyan:    '0x66cccc'
+#     white:   '0xdddddd'
 
 visual_bell:
   animation: EaseOutExpo
