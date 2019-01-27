@@ -2,7 +2,7 @@
 
 sudo pacman -S yay
 
-curl -L git.io/antigen > antigen.zsh
+curl -L git.io/antigen > ~/antigen.zsh
 
 yay -S adobe-source-code-pro-fonts zsh zsh-completions alacritty neofetch feh nomachine firefox firefox-i18n-en-gb ruby rofi polybar npm
 
