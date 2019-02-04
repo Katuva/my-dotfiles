@@ -107,8 +107,8 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+h split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $mod+h split h;exec notify-send --icon=/usr/share/icons/Adwaita/scalable/actions/object-flip-horizontal-symbolic.svg 'Tile horizontally'
+bindsym $mod+v split v;exec notify-send --icon=/usr/share/icons/Adwaita/scalable/actions/object-flip-vertical-symbolic.svg 'Tile vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
@@ -240,7 +240,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+0 exec sh $HOME/.config/rofi/scripts/powermenu.sh
 
 # Resize window (you can also use the mouse for that)
-bindsym $mod+r exec notify-send --icon=/usr/share/icons/Adwaita/scalable/actions/object-flip-horizontal-symbolic.svg "Resizing mode"; mode "resize"
+bindsym $mod+r exec notify-send --icon=/usr/share/icons/Adwaita/scalable/actions/view-fullscreen-symbolic.svg "Resizing mode"; mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
         # Pressing left will shrink the window’s width.

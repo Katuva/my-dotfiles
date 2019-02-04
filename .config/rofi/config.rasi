@@ -1,5 +1,4 @@
 configuration {
-    drun-icon-theme:    "Papirus-Dark";
     font:               "Droid Sans bold 14";
     cycle:              true;
     hide-scrollbar:     true;

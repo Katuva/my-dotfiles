@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rofi_command="rofi -columns 4 -lines 1 -theme themes/powermenu.rasi"
+rofi_command="rofi -theme themes/powermenu.rasi"
 
 # Each of the icon is a selectable element
 options=$'\n\n\n'
