@@ -10,7 +10,7 @@ if has('clipboard')
 endif
 
 set ignorecase
-set number
+set number relativenumber
 set conceallevel=1
 set termguicolors
 
@@ -49,12 +49,10 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'mhinz/vim-startify'
 Plug 'vim-scripts/nginx.vim'
-Plug 'Quramy/tsuquyomi'
 Plug 'Shougo/vimproc.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'StanAngeloff/php.vim'
 Plug 'stephpy/vim-php-cs-fixer'
-Plug 'junegunn/fzf.vim'
 Plug 'tobyS/vmustache'
 Plug 'tobyS/pdv'
 Plug 'SirVer/ultisnips'
@@ -70,6 +68,8 @@ Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
+Plug 'thaerkh/vim-indentguides'
+" Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
 
@@ -135,3 +135,10 @@ let g:LanguageClient_selectionUI = 'fzf'
 
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+au FileType php let b:delimitMate_matchpairs = "(:),[:],{:}"
+
+" let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_guide_size = 1
+" set ts=4 sw=4 et
+" let g:indent_guides_color_change_percent = 30
