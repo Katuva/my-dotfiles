@@ -17,6 +17,10 @@ mkdir -p ./.config
 \cp -r ~/.config/polybar ./.config/
 \cp -r ~/.config/rofi ./.config/
 
+mkdir -p ./.config/nvim
+
+\cp ~/.config/nvim/init.vim ./.config/nvim
+
 mkdir -p ./.local/share/fonts/
 
 \cp ~/.local/share/fonts/*.ttf ./.local/share/fonts

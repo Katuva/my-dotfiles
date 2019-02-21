@@ -44,3 +44,4 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time o
 
 antigen apply
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
