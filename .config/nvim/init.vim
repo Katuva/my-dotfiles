@@ -17,14 +17,21 @@ set termguicolors
 set expandtab
 set autoindent
 set softtabstop=4
-set shiftwidth=2
+set shiftwidth=4
 set tabstop=4
+"
+" autocmd FileType yaml setlocal softtabstop=2 shiftwidth=2 tabstop=2
+
+set cursorline
+set cursorcolumn
 
 set history=1000
 
 filetype plugin indent on
 
 set undodir=~/.config/nvim/undodir
+
+set mouse=a
 
 call plug#begin('~/.vim/plugged')
 
@@ -68,8 +75,10 @@ Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
-Plug 'thaerkh/vim-indentguides'
+Plug 'tpope/vim-sleuth'
+" Plug 'thaerkh/vim-indentguides'
 " Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -99,7 +108,7 @@ inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<TAB>"
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_open_list = 1
+let g:ale_open_list = 0
 let g:ale_keep_list_window_open = 0
 let g:ale_set_quickfix = 0
 let g:ale_list_window_size = 5

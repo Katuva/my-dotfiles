@@ -16,6 +16,7 @@ mkdir -p ./.config
 \cp -r ~/.config/neofetch ./.config/
 \cp -r ~/.config/polybar ./.config/
 \cp -r ~/.config/rofi ./.config/
+\cp -r ~/.config/kitty ./.config/
 
 mkdir -p ./.config/nvim
 

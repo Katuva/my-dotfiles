@@ -30,7 +30,7 @@ title_align center
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -190,7 +190,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws8
 
 # Open applications on specific workspaces
-assign [class="Alacritty"] $ws1
+# assign [class="Alacritty"] $ws1
 assign [class="Firefox"] $ws2
 # assign [class="Emacs"] $ws3
 assign [class="Pcmanfm"] $ws4
